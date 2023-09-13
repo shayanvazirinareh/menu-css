@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root {
+    --body-color: #f7f7fa;
+    --header-text-color: #333333;
+    --text-color: #929294;
+    --green: #1fa185;
+    --black: #17242A;
+    --purple: #3c428c;
+}
+
+body {
+    background-color: var(--body-color);
+    scroll-behavior: smooth;
+}
+
+.menu {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+
+.menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    font-style: italic;
+}
+
+.menu a {
+    color: var(--purple);
+}
+
+.menu-m,
+.menu-s,
+.slider-sub {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-m {
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+    }
+
+    .menu-m ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+        font-style: italic;
+    }
+
+    .menu-m ul li {
+        background-color: yellow;
+    }
+
+    .btn-menu {
+        cursor: pointer;
+    }
+
+    .menu-s {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 92.5vh;
+        position: fixed;
+        top: 3rem;
+        right: -50%;
+        background-color: aqua;
+        transition: 1s;
+    }
+    .menu-s ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-style: italic;
+    }
+
+    .slider-sub {
+        display: block;
+        width: 50%;
+        height: 92.5vh;
+        position: fixed;
+        top: 3rem;
+        right: -50%;
+        background-color: blue;
+        transition: 1s;
+    }
+}
